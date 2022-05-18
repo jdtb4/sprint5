@@ -10,6 +10,6 @@ async function callAPI(){
 
     
     console.log(jokeObj); // Exercise 1.
-    //printJokes.innerHTML = jokeObj.joke;
+    printJokes.innerHTML = jokeObj.joke; // Exercise 2.
 }
 callAPI();
