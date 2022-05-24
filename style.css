@@ -1,25 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
 body {
-    background: rgb(174,227,238);
+    font-family: 'Assistant', sans-serif;
     background: radial-gradient(circle, rgba(174,227,238,1) 0%, rgba(148,233,210,1) 92%);
 }
 section {
-    margin-top: 60px;
+    position: relative;
     display: flex;
     justify-content: center;
 }
 .card{
     padding: 30px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 500px;
     height: fit-content;
     border-radius: 10px;
-    box-shadow: 0 8px 10px rgba(190, 190, 190, 0.605);
-    background-color: #d0f4f1;
+    background: transparent;
+}
+.blob{
+    top: 0px;
+    position: absolute;
+    background-image: url('/img/Vector.png');
+    width: 600px;
+    height: 600px;
+    background-size: cover;
 }
 #jokePrint{
-    margin: 40px;
+    margin: 40px 20px 40px 20px;
+}
+.ranking{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+#bad,#medium,#good{
+    width: 50px;
+}
+#bad:hover, #good:hover, #medium:hover{
+    box-shadow: 0 0 0 4px rgba(39, 198, 198, 0.564);
 }
 button {
     color: white;
@@ -27,7 +48,7 @@ button {
     height: 35px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(39, 198, 198);  
+    background-color: rgb(36, 173, 173);  
 }
 button:hover{
     box-shadow: 0 0 0 4px rgba(39, 198, 198, 0.564);

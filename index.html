@@ -15,9 +15,15 @@
         </div>
     </header>
     <section>
+        <div class="blob"></div>
         <div class="card">
             <h2>Preparats per riure? 🤣</h2>
             <span id="jokePrint"></span>
+            <div class="ranking">
+                <img src="/img/vote1.svg" id="bad" onclick="vote(1)"></img>
+                <img src="/img/vote2.svg" id="medium"onclick="vote(2)"></img>
+                <img src="/img/vote3.svg" id="good" onclick="vote(3)"></img>
+            </div>
             <button type="button" onclick="callAPI()">Seguent acudit</button>
         </div>
     </section>
