@@ -1,5 +1,5 @@
 const printJokes = document.getElementById("jokePrint");
-
+let jokes = {};
 async function callAPI(){
     const jokeData =  await fetch ('https://icanhazdadjoke.com/', {
         headers: {
@@ -7,29 +7,20 @@ async function callAPI(){
         }
     });
     const jokeObj = await jokeData.json();
-
+    jokes = jokeObj
     
     console.log(jokeObj); // Exercise 1.
     printJokes.innerHTML = jokeObj.joke; // Exercise 2.
+    return jokeObj;
 }
 callAPI();
 
 const reportJokes = [];
 let score = 0;
-let joke = callAPI()
 function vote(value){
     const currentDate = new Date();
     let dateISO = currentDate.toISOString();
-    if (value === 1){
-        score = 1
-    }
-    if (value === 2){
-        score = 2
-    }
-    if (value === 3){
-        score = 3
-    }
-    reportJokes.push({joke: joke.joke, date: dateISO, score: score.score})
+    reportJokes.push({joke: jokes.joke, date: dateISO, score: value});
     console.log(reportJokes);
     return score;
 }
