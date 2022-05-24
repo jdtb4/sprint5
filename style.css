@@ -44,6 +44,10 @@ section {
     height: 128.85px;
     background-size: cover;
 }
+.weather{
+    display: flex;
+    align-items: center;
+}
 #jokePrint{
     margin: 40px 20px 40px 20px;
 }
