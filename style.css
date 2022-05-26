@@ -9,22 +9,20 @@ section {
     justify-content: center;
 }
 .card{
-    padding: 50px;
+    padding: 80px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 500px;
-    height: fit-content;
-    border-radius: 10px;
-    background: transparent;
+    height: 350px;
 }
 .blob{
     top: 0px;
     position: absolute;
     background-image: url('/img/blob-back2.png');
     width: 600px;
-    height: 600px;
+    height: 600px; 
     background-size: cover;
 }
 .mini-blob{
@@ -37,7 +35,7 @@ section {
 }
 .mini-blob2{
     left: 30px;
-    bottom: -200px;
+    bottom: -100px;
     position: absolute;
     background-image: url('/img/mini-blob2.png');
     width: 138.07px;
@@ -60,18 +58,26 @@ section {
 #bad,#medium,#good{
     width: 50px;
     border-radius: 50%;
+    cursor: pointer;
 }
 #bad:hover, #good:hover, #medium:hover{
     box-shadow: 0 0 0 4px rgba(185, 175, 36, 0.793);
+    transform: translateY(4px);
 }
-button {
+button{
     color: white;
     width: 150px;
     height: 35px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(36, 173, 173);  
+    background-color: rgb(36, 173, 173);
+    cursor: pointer;
+}
+#bad:active, #good:active, #medium:active{
+    transform: scale(1.1);
+    background-color: rgb(185, 175, 36);
 }
 button:hover{
     box-shadow: 0 0 0 4px rgba(82, 197, 197, 0.597);
+    transform: translateY(4px);
 }
