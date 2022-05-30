@@ -11,11 +11,14 @@
 <body>
     <header>
         <div class="weather">
-            <p>Temperature</p>
+            <span id="conditions"></span>
+            <span id="temperature"></span>
         </div>
     </header>
     <section>
         <div class="blob"></div>
+        <div class="mini-blob"></div>
+        <div class="mini-blob2"></div>
         <div class="card">
             <h2>Preparats per riure? 🤣</h2>
             <span id="jokePrint"></span>
@@ -24,7 +27,7 @@
                 <img src="/img/vote2.svg" id="medium"onclick="vote(2)"></img>
                 <img src="/img/vote3.svg" id="good" onclick="vote(3)"></img>
             </div>
-            <button type="button" onclick="callAPI()">Seguent acudit</button>
+            <button type="button" onclick="randomFunction()">Seguent acudit</button>
         </div>
     </section>
     <script src="/app.js"></script>
